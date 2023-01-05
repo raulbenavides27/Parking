@@ -1,12 +1,78 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title>Login</ion-title>
+  <ion-toolbar color="secondary">
+    <ion-title>Parking</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Iniciar Sesión</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    
+    <form >
+      <ion-item>
+    <ion-label Position="floating">Nombre</ion-label>
+    <ion-input ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label Position="floating">Contraseña</ion-label>
+      <ion-input type="password"></ion-input>
+      </ion-item>
+    </form>
+    <br>
+  <ion-button color="secondary">Ingresar</ion-button>
+ 
+  </ion-card-content>
+</ion-card>
+ 
+<ion-card> 
+  <ion-card>
+<ion-img [src]=""></ion-img>
+</ion-card>
+</ion-card> 
 </ion-content>
+
+<!--
+<ion-footer>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/registro']">Registrarse</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
+
+  <br>
+<ion-button  color="secondary">Ingresar</ion-button>
+
+  <ion-grid class="ion-padding">
+    <ion-button routerLink="/home" class="omitir" fill="clear" shape="round">Omitir</ion-button>
+
+    <ion-row>
+      <ion-col size="12">
+        <ion-img class="logo" src="/assets/icon/logomorado.png"></ion-img>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <h1 class="titulo ion-text-center">Par-king</h1>
+      </ion-col>
+    </ion-row>
+    
+  </ion-grid>
+
+  <section class="ion-text-center" class="ion-padding">
+    <p class="letras">Elije cómo quieres ingresar</p>
+
+    <ion-button routerLink="/regoogle" expand="full" class="google boton" color="boton" fill="outline" shape="round">
+    <ion-icon slot="start" name="logo-google"></ion-icon>Continuar con Google</ion-button>
+    
+    <ion-button routerLink="/renumero" expand="full" class="numero boton" color="boton" fill="outline" shape="round">
+    <ion-icon slot="start" name="person"></ion-icon>Continuar con Usuario</ion-button>
+    
+    <a href="/bienvenida"><p class="otraforma">Continuar de otra forma</p></a>
+  </section>
+</ion-content>-->
