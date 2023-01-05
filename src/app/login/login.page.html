@@ -5,7 +5,9 @@
 </ion-header>
 
 <ion-content>
-
+  <ion-card size="12">
+    <ion-img class="logo" src="/assets/icon/logomorado.png"></ion-img>
+</ion-card>
 <ion-card>
   <ion-card-header>
     <ion-card-title>Iniciar Sesión</ion-card-title>
@@ -29,10 +31,15 @@
 </ion-card>
  
 <ion-card> 
-  <ion-card>
-<ion-img [src]=""></ion-img>
-</ion-card>
+ 
 </ion-card> 
+<ion-footer>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/registro']">Registrarse</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
 </ion-content>
 
 <!--
@@ -51,7 +58,7 @@
     <ion-button routerLink="/home" class="omitir" fill="clear" shape="round">Omitir</ion-button>
 
     <ion-row>
-      <ion-col size="12">
+      <ion-col >
         <ion-img class="logo" src="/assets/icon/logomorado.png"></ion-img>
       </ion-col>
     </ion-row>
