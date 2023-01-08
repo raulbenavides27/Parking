@@ -1,86 +1,42 @@
-<ion-header></ion-header>
-<ion-content>
-    <!--<app-menu titulomenu=""></app-menu>-->
-    <ion-menu contentId="main-content" type="overlay">
-        <ion-header>
-          <ion-toolbar>
-            <ion-img class="logo" slot="start" src="assets/icon/logomoradooutline.png"></ion-img>
-            <ion-title class="titulologo">Parker</ion-title>
-            <ion-grid fixed>
-                <ion-row>
-                  <!--<ion-col size="12">Hola! <ion-label>Dante</ion-label></ion-col>-->          
-                </ion-row>
-            </ion-grid>
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+    <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    
+    <ion-title>
+      <br>
+      <ion-searchbar class="search" mode="ios"  placeholder="Buscar Direccion"></ion-searchbar>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+         <ion-header collapse="condense">
+          <ion-toolbar >
+            
           </ion-toolbar>
         </ion-header>
-        <ion-content class="ion-padding">
 
-          <ion-list>
-            <ion-item>
-              <ion-button routerLink="/home" class="btm" fill="clear"><ion-icon slot="start" name="home"></ion-icon>Inicio</ion-button>
-            </ion-item>
-            <ion-item>
-              <ion-button routerLink="/vehiculo" class="btm" fill="clear"><ion-icon slot="start" name="car-sport"></ion-icon>Mis vehículos</ion-button>
-            </ion-item>
-            <ion-item>
-              <ion-button routerLink="/estacionamiento" class="btm" fill="clear"><ion-icon slot="start" name="business"></ion-icon>Mis estacionamientos</ion-button>
-            </ion-item>
-            <ion-item>
-              <ion-button routerLink="/codigoqr" class="btm" fill="clear"><ion-icon slot="start" name="qr-code"></ion-icon>Escanear Portico</ion-button>
-            </ion-item>
-            <ion-item>
-              <ion-button routerLink="/pagos" class="btm" fill="clear"><ion-icon slot="start" name="card"></ion-icon>Pagos y sanciones</ion-button>
-            </ion-item>
-            <ion-item>
-              <ion-button routerLink="/geolocalizacion"class="btm" fill="clear"><ion-icon slot="start" name="locate-outline"></ion-icon>Geolocalizacion</ion-button>
-            </ion-item>
-            <ion-item>
-              <ion-button routerLink="/ajustes" class="btm" fill="clear"><ion-icon slot="start" name="settings"></ion-icon>Ajustes</ion-button>
-            </ion-item>
-            <ion-item>
-              <ion-button routerLink="/ayuda" class="btm" fill="clear"><ion-icon slot="start" name="information-circle"></ion-icon>Ayuda</ion-button>
-            </ion-item>
-            <ion-item>
-              <ion-button routerLink="/slide"class="btm" fill="clear"><ion-icon slot="start" name="exit"></ion-icon>Salir</ion-button>
-            </ion-item>
-          </ion-list>
-
-        </ion-content>
-      </ion-menu>
-      <div class="ion-page" id="main-content">
-        <ion-header>
-          <ion-toolbar>
-            <ion-buttons slot="start">
-              <ion-menu-button></ion-menu-button>
-            </ion-buttons>
-            <ion-searchbar class="search" mode="ios" animated="true" placeholder="Buscar Direccion"></ion-searchbar>
-          </ion-toolbar>
-        </ion-header>
-        <ion-content>
-
+        
+        
+<ion-card>
+  <ion-img  src="assets/icon/logo_4.png"></ion-img>
+</ion-card>
           <div #map id="map">
             <!--API DE GOOGLE MAP-->
           </div>
 
-
-          <ion-button class="boton" expand="block" shape="round" color="boton"><ion-icon slot="start" name="pin"></ion-icon>Buscar Estacionamiento</ion-button>
-
-          <ion-button class="boton" expand="block" shape="round" color="boton"><ion-icon slot="start" name="car"></ion-icon>Buscar Vehiculo</ion-button>
-
-          <ion-grid fixed>
-            <ion-row>
-              <ion-col size="6">
-                <ion-button class="boton2" expand="block" shape="round" color="boton"><ion-icon slot="start" name="card"></ion-icon>Pagar</ion-button>
+          <ion-grid >
+           <ion-row>
+            <ion-col   >
+              <ion-button zise="8" expand="block"><ion-icon slot="start" name="pin"></ion-icon>Buscar Estacionamiento</ion-button>
+            </ion-col>
+              <ion-col   >
+                <ion-button zise="8"  expand="block" ><ion-icon slot="start" name="people-outline"></ion-icon>Usuarios</ion-button>
               </ion-col>
-              <ion-col size="6">
-                <ion-button class="boton2" expand="block" shape="round" color="boton"><ion-icon slot="start" name="qr-code"></ion-icon>QR Code</ion-button>
-              </ion-col>
-            </ion-row>
-
-          </ion-grid>
           
-        </ion-content>
-      </div>
+            </ion-row>
+          </ion-grid>
 </ion-content>
 
 
