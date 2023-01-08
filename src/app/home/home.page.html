@@ -2,26 +2,17 @@
   <ion-toolbar color="secondary">
     <ion-buttons slot="start">
     <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    
+    </ion-buttons> 
     <ion-title>
       <br>
       <ion-searchbar class="search" mode="ios"  placeholder="Buscar Direccion"></ion-searchbar>
     </ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content [fullscreen]="true">
-         <ion-header collapse="condense">
-          <ion-toolbar >
-            
-          </ion-toolbar>
-        </ion-header>
+<ion-content >    
+<ion-card color="translucent">
+  <ion-img  src="assets/icon/icono_3.png"></ion-img>
 
-        
-        
-<ion-card>
-  <ion-img  src="assets/icon/logo_4.png"></ion-img>
-</ion-card>
           <div #map id="map">
             <!--API DE GOOGLE MAP-->
           </div>
@@ -29,14 +20,15 @@
           <ion-grid >
            <ion-row>
             <ion-col   >
-              <ion-button zise="8" expand="block"><ion-icon slot="start" name="pin"></ion-icon>Buscar Estacionamiento</ion-button>
+              <ion-button  expand="block"><ion-icon slot="start" name="pin"></ion-icon>Buscar Estacionamiento</ion-button>
             </ion-col>
               <ion-col   >
-                <ion-button zise="8"  expand="block" ><ion-icon slot="start" name="people-outline"></ion-icon>Usuarios</ion-button>
+                <ion-button expand="block"  [routerLink]="'/login'"><ion-icon slot="start" name="people-outline"></ion-icon>Usuarios</ion-button>
               </ion-col>
           
             </ion-row>
           </ion-grid>
+        </ion-card>
 </ion-content>
 
 

@@ -1,19 +1,22 @@
 <ion-header>
   <ion-toolbar color="secondary">
-    <ion-title>  
-      <ion-img class="logo" src="/assets/icon/logo_1.png"></ion-img>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons> 
+     <ion-title>  
+    Usuario
   </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+<ion-card color="translucent">
+  <ion-img   src="/assets/icon/logo_1.png"></ion-img>
 
-<ion-card>
   <ion-card-header>
     <ion-card-title>Iniciar Sesión</ion-card-title>
   </ion-card-header>
   <ion-card-content>
-    
     <form >
       <ion-item>
     <ion-label Position="floating">Nombre</ion-label>
@@ -29,10 +32,9 @@
  
   </ion-card-content>
 </ion-card>
- 
-<ion-card> 
- 
-</ion-card> 
+
+
+</ion-content>
 <ion-footer>
   <ion-toolbar color="secondary">
     <ion-buttons slot="end">
@@ -40,8 +42,6 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-footer>
-</ion-content>
-
 <!--
 <ion-footer>
   <ion-toolbar color="secondary">
