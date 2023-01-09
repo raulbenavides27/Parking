@@ -7,14 +7,15 @@
     </ion-header>
     <ion-content>
       <ion-list>
-        <ion-menu-toggle auto-hide="false" >
-          <ion-item  >
-            <ion-icon slot="start" ></ion-icon>
-            <ion-label>Titulo</ion-label>
+        <ion-menu-toggle auto-hide="false" *ngFor="let pagina of paginas; let i = index">
+          <ion-item   [routerLink]="[pagina.url]"
+            lines="none" detail="false" [class.selected]="indiceSeleccionado == i">
+            <ion-icon slot="start" [name]="pagina.icono + '-outline'"></ion-icon>
+            <ion-label>{{pagina.titulo}}</ion-label>
           </ion-item>
         </ion-menu-toggle>
         <ion-menu-toggle auto-hide="false">
-          <ion-item routerDirection="root" lines="none" detail="false">
+          <ion-item (click)="salir()" routerDirection="root" lines="none" detail="false">
             <ion-icon slot="start" [name]="'exit-outline'"></ion-icon>
             <ion-label>Salir</ion-label>
           </ion-item>
