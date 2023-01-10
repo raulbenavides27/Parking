@@ -4,16 +4,28 @@ import { IngresadoGuard } from './ingresado.guard';
 import { NoIngresadoGuard } from './no-ingresado.guard';
 
 const routes: Routes = [
+
   {
     path: '',
     redirectTo: 'login',
     pathMatch: 'full'
-  }, 
-  {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule),
-    canActivate: [IngresadoGuard]
   },
+  {
+    path: 'login',
+    redirectTo: 'login',
+    pathMatch: 'full'
+  },
+  {
+    path: 'registro',
+    redirectTo: 'registro',
+    pathMatch: 'full'
+  },
+  {
+    path: 'menu',
+    redirectTo: 'menu',
+    pathMatch: 'full'
+  },
+
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule),
@@ -26,14 +38,16 @@ const routes: Routes = [
   },
   {
     path: 'menu',
-    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
-  },
-  {
-    path: 'e404',
-    loadChildren: () => import('./e404/e404.module').then( m => m.E404PageModule)
+    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule),
+    canActivate: [IngresadoGuard]
   },
 
-];
+ 
+
+ 
+
+] 
+;
 
 @NgModule({
   imports: [
