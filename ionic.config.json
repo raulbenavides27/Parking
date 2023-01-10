@@ -1,7 +1,9 @@
 {
-  "name": "Parking",
+  "name": "marker",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {
+      "enabled": false
+    }
   },
   "type": "angular"
 }

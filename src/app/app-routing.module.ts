@@ -21,6 +21,12 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'detalle-notas',
+    redirectTo: 'detalle-notas',
+    pathMatch: 'full'
+  },
+  
+  {
     path: 'menu',
     redirectTo: 'menu',
     pathMatch: 'full'
@@ -41,8 +47,17 @@ const routes: Routes = [
     loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule),
     canActivate: [IngresadoGuard]
   },
-
- 
+  {
+    path: 'detalle-notas',
+    loadChildren: () => import('./detalle-notas/detalle-notas.module').then( m => m.DetalleNotasPageModule)
+  },  {
+    path: 'agregar',
+    loadChildren: () => import('./agregar/agregar.module').then( m => m.AgregarPageModule)
+  },
+  {
+    path: 'editar',
+    loadChildren: () => import('./editar/editar.module').then( m => m.EditarPageModule)
+  },
 
  
 

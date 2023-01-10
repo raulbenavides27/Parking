@@ -1,0 +1,10 @@
+<ion-card *ngIf="nota">
+  <ion-card-content>
+    <p id="fechaTexto">{{nota.fechaTexto}}</p>
+    <ion-textarea rows="12" [(ngModel)] = "nota.texto" [disabled]="soloLectura">
+    </ion-textarea>
+  </ion-card-content>
+  <ion-button expand="block"  color="secondary" (click)="guardar(nota)" *ngIf="!soloLectura">
+    Guardar
+  </ion-button>
+</ion-card>

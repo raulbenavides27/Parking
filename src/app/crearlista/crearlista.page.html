@@ -1,0 +1,73 @@
+  <ion-header [translucent]="true">
+    <ion-toolbar color="secondary">
+        <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Crear lista</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content [fullscreen]="true">
+       <ion-list [inset]="true" lines="none" >
+           <ion-accordion-group [multiple]="true" [value]="['first', 'third']" lines="none">
+            <ion-accordion *ngFor="let p of productos" >
+              <ion-item  slot="header" color="tertiary">
+                <ion-thumbnail slot="start">
+                  <ion-img [src]="p.imageURL"></ion-img>
+                  </ion-thumbnail>
+                <ion-label>{{p.title}}</ion-label>
+              </ion-item>
+
+              <div class="ion-padding" slot="content">
+                <ion-item > 
+                  <ion-checkbox slot="end"></ion-checkbox>
+                  <ion-label>primer producto</ion-label>
+                </ion-item>
+              </div>
+
+              <div class="ion-padding" slot="content">
+                <ion-item>
+                <ion-checkbox slot="end"></ion-checkbox>
+                <ion-label>segundo producto</ion-label>
+              </ion-item>
+             </div>
+
+              <div class="ion-padding" slot="content">
+                <ion-item>
+                <ion-checkbox slot="end"></ion-checkbox>
+                <ion-label>tercer producto</ion-label>
+              </ion-item>
+            </div>
+
+            </ion-accordion>
+        
+            
+          </ion-accordion-group>
+
+
+    </ion-list>
+
+</ion-content>
+
+<!--
+  <ion-accordion-group [multiple]="true" [value]="['first', 'third']">
+  <ion-accordion value="first">
+    <ion-item slot="header" color="light">
+      <ion-label>First Accordion</ion-label>
+    </ion-item>
+    <div class="ion-padding" slot="content">First Content</div>
+  </ion-accordion>
+  <ion-accordion value="second">
+    <ion-item slot="header" color="light">
+      <ion-label>Second Accordion</ion-label>
+    </ion-item>
+    <div class="ion-padding" slot="content">Second Content</div>
+  </ion-accordion>
+  <ion-accordion value="third">
+    <ion-item slot="header" color="light">
+      <ion-label>Third Accordion</ion-label>
+    </ion-item>
+    <div class="ion-padding" slot="content">Third Content</div>
+  </ion-accordion>
+</ion-accordion-group>
+-->

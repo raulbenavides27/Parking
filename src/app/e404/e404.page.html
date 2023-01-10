@@ -1,9 +1,15 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>e404</ion-title>
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Pagina no encontrada
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
-</ion-content>
+  <ion-content class="ion-padding">
+<ion-img src="assets/images/404.png"></ion-img>
+<ion-button class="ion-margin-top " expand="block" [routerLink]="'/menu/home'" color="secondary">Volver a Inicio</ion-button>
+  </ion-content>

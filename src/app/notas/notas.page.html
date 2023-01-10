@@ -1,0 +1,15 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Notas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+      <app-card-notas [nota]="notaActual"(eventoGuardar)="guardar($event)"></app-card-notas>
+     
+</ion-content>

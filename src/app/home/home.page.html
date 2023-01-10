@@ -2,33 +2,28 @@
   <ion-toolbar color="secondary">
     <ion-buttons slot="start">
     <ion-menu-button></ion-menu-button>
-    </ion-buttons> 
+    </ion-buttons>
     <ion-title>
-      <br>
-      <ion-searchbar class="search" mode="ios"  placeholder="Buscar Direccion"></ion-searchbar>
+      ListMarket
     </ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content >    
-<ion-card color="translucent">
-  <ion-img  src="assets/icon/icono_3.png"></ion-img>
 
-          <div #map id="map">
-            <!--API DE GOOGLE MAP-->
-          </div>
+<ion-content [fullscreen]="true">
+ 
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">ListMarket</ion-title>
+  
+    </ion-toolbar>
+  </ion-header>
 
-          <ion-grid >
-           <ion-row>
-            <ion-col   >
-              <ion-button  expand="block"><ion-icon slot="start" name="pin"></ion-icon>Estacionamiento</ion-button>
-            </ion-col>
-              <ion-col   >
-                <ion-button expand="block"  [routerLink]="'/login'"><ion-icon slot="start" name="people-outline"></ion-icon>Usuarios</ion-button>
-              </ion-col>
-          
-            </ion-row>
-          </ion-grid>
-        </ion-card>
+  <div id="container">
+    <ion-list>
+      <div><ion-button expand="block" [routerLink]="'../mnotas'"      color="secondary">Notas</ion-button></div>
+      <div><ion-button expand="block" [routerLink]="'../crearlista'" color="secondary">Crear lista </ion-button></div>
+      <div><ion-button expand="block" [routerLink]="'../pendientes'" color="secondary">Ejemplo API   </ion-button></div>
+      <div><ion-button expand="block" [routerLink]="'../favorito'"   color="secondary">Favorito    </ion-button></div>
+    </ion-list>
+  </div>
 </ion-content>
-
-

@@ -23,4 +23,3 @@ export class IngresadoGuard implements CanActivate {
   }
   
 }
-
