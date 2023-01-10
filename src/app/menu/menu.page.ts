@@ -15,12 +15,8 @@ export class MenuPage implements OnInit {
       titulo: 'Home',
       url: '/menu/home',
       icono: 'home'
-    }, 
-    {
-      titulo: 'e404',
-      url: '/menu/e404',
-      icono: 'home'
-    }   
+    },
+  
   ]
 
   constructor(public alertController: AlertController,
@@ -29,30 +25,33 @@ export class MenuPage implements OnInit {
   ngOnInit() {
   }
 
-
-
-  async salir(){
-    const alert = await this.alertController.create({
-      header: 'Salir',
-      message: '¿Confirmar para salir?',
-      buttons: [
-        {
-          text: 'Cancelar',
-          handler: () => {
-            
-          }
-        }, {
-          text: 'Aceptar',
-          handler: () => {
-            localStorage.removeItem('ingresado');
-            this.navCtrl.navigateRoot('login');
-          }
-        }
-      ]
-    });
-
-    await alert.present();
+ // cambiarIndiceSeleccionado(i){
+ //   this.indiceSeleccionado = i;
   }
 
-}
+//  async salir(){
+   // const alert = await this.alertController.create({
+   //   header: 'Salir',
+    //  message: '¿Confirmar para salir?',
+    //  buttons: [
+    //    {
+    //      text: 'Cancelar',
+    //      handler: () => {
+     //       
+    //      }
+    //    }, {
+     //     text: 'Aceptar',
+     //     handler: () => {
+     //       localStorage.removeItem('ingresado');
+      //      this.navCtrl.navigateRoot('login');
+     //     }
+     //   }
+    //  ]
+    //});
+
+  //  await alert.present();
+  //
+//}
+
+//}
 
