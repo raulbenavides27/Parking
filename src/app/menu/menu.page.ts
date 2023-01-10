@@ -15,29 +15,12 @@ export class MenuPage implements OnInit {
       titulo: 'Home',
       url: '/menu/home',
       icono: 'home'
-    },
+    }, 
     {
-      titulo: 'Crear lista',
-      url: '/menu/crearlista',
-      icono: 'receipt'
-      
-    },
-    {
-      titulo: 'Notas',
-      url: '/menu/mnotas',
-      icono: 'book'
-    },
-    {
-      titulo: 'Ejemplo API',
-      url: '/menu/pendientes',
-      icono: 'book'
-    },
-    {
-      titulo: 'Favoritos',
-      url: '/menu/favorito',
-      icono: 'book'
-    }
-  
+      titulo: 'e404',
+      url: '/menu/e404',
+      icono: 'home'
+    }   
   ]
 
   constructor(public alertController: AlertController,
@@ -46,9 +29,7 @@ export class MenuPage implements OnInit {
   ngOnInit() {
   }
 
- // cambiarIndiceSeleccionado(i){
-   // this.indiceSeleccionado = i;
-  //}
+
 
   async salir(){
     const alert = await this.alertController.create({
